@@ -1,0 +1,33 @@
+{
+    "name": "vagrant",
+    "description": "Vagrant CLI wrapper",
+    "author": "Dav Glass <davglass@gmail.com>",
+    "version": "0.0.1",
+    "dependencies": {
+        "which": "*"
+    },
+    "devDependencies": {
+        "yui-lint": "~0.1.1",
+        "istanbul": "~0.1.8",
+        "vows": "*"
+    },
+    "keywords": [
+        "vagrant", "cli", "passthru"
+    ],
+    "main": "./lib/vagrant.js",
+    "scripts": {
+        "pretest": "jshint --config ./node_modules/yui-lint/jshint.json ./lib/",
+        "test": "istanbul cover --print both vows -- --spec ./tests/*.js"
+    },
+    "bugs": { "url" : "http://github.com/davglass/vagrant/issues" },
+    "licenses":[
+        {
+            "type" : "BSD",
+            "url" : "https://github.com/davglass/vagrant/blob/master/LICENSE"
+        }
+    ],
+    "repository": {
+        "type":"git",
+        "url":"http://github.com/davglass/vagrant.git"
+    }
+}
